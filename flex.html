@@ -1,0 +1,69 @@
+
+<html>
+<head>
+    <title>Grid and Flexbox Layout</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            /* Left section 2 parts, right section 3 parts */
+            grid-gap: 10px;
+            /* Space between the sections */
+            width: 80%;
+            height: 60%;
+        }
+
+        .left {
+            background-color: #8c6cff;
+        }
+
+        .right {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            /* Three rows: large box, small boxes, bottom box */
+            grid-gap: 10px;
+            /* Space between the rows */
+        }
+
+        .up-box {
+            background-color: #8c6cff;
+        }
+
+        .small-boxes {
+            display: flex;
+            gap: 10px;
+            /* Space between the smaller boxes */
+        }
+
+        .small-box {
+            flex: 1;
+            background-color: #8c6cff;
+        }
+
+        .down-box {
+            background-color: #8c6cff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">1</div>
+
+        <div class="right">
+            <div class="up-box">2</div>
+            <div class="small-boxes">
+                <div class="small-box">3</div>
+                <div class="small-box">4</div>
+            </div>
+            <div class="down-box">5</div>
+        </div>
+
+    </div>
+</body>
+</html>
